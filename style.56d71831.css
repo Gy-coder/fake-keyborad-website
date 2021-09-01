@@ -1,0 +1,103 @@
+.keyboard{
+    background: #e6c7c8;
+    box-shadow: 4px 4px 4px 4px #e6c7c8;
+    position: fixed;
+    width: 100%;
+    bottom:  0;
+    max-width:  600px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    opacity: 0;
+    transition: all .3s;
+}
+
+.keyboard.show {
+    transform:translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.keyboard .page{
+    color: #ee97ae;
+    padding: 6px;
+    display: none;
+}
+
+.keyboard .page.page-lowercase{display: block;}
+
+.row{
+    display: flex;
+}
+
+.keyboard .row > span{
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 0 4px 0 #fff;
+}
+
+
+.keyboard .row > span.active{
+    box-shadow: 0 0 1px 0 #000 inset;
+}
+
+.col-1{
+    width: 5%;
+}
+
+.col-2{
+    width: 10%;
+}
+.col-3 {
+    width: 15%;
+}
+.col-4{
+    width: 20%;
+}
+.col-12{
+    width: 60%;
+}
+.offset-1{
+    margin-left: 5%;
+}
+
+.input{
+    display: inline-block;
+    min-width:  100px;
+    min-height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 10px;
+    line-height: 20px;
+}
+
+.input.focus::after{
+    content: '|';
+    font-size: 14px;
+    animation: dance 1s linear infinite;
+}
+
+@keyframes dance {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    51%{
+        opacity: 0;
+    }
+    99%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/*# sourceMappingURL=style.56d71831.css.map */
